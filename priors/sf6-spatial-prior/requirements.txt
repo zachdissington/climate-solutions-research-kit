@@ -1,0 +1,11 @@
+# SF6-from-grid spatial prior — v1 pipeline deps
+earth-osm>=3.0.2        # OSM power-infrastructure extraction (substations + voltage tags)
+geopandas>=0.14         # vector geometry + spatial joins
+shapely>=2.0
+pandas>=2.0
+numpy>=1.26
+# raster / gridded benchmark handling (EDGAR v8, GAINS grids)
+xarray>=2024.1
+netCDF4>=1.6
+rasterio>=1.3
+rioxarray>=0.15

@@ -1,0 +1,27 @@
+# Drawdown-derived content is generated locally from your own export and is
+# never committed here (see README + https://drawdown.org/terms-of-use).
+/data/
+/solutions/
+
+# Large public datasets — downloaded by each prior's src/, not committed.
+# See per-prior README + factors/SOURCES.md for provenance.
+**/data/posteriors/
+**/data/benchmarks/
+**/data/*.zip
+**/data/*.nc
+**/data/*.nc4
+**/data/*.tif
+
+# Generated outputs
+**/outputs/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+
+# OS
+.DS_Store
+Thumbs.db

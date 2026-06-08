@@ -1,0 +1,17 @@
+# SF6 nameplate charge PER CIRCUIT BREAKER, by voltage class and technology.
+# gis = gas-insulated switchgear; ais = air-insulated (SF6 only in the interrupter).
+# status: SOURCED = from a cited measurement/LCA; MODELLED_LOWCONF = extrapolated, wide band, see SOURCES.md.
+#
+# IMPORTANT (recorded 2026-06-03): the SOURCED sample shows per-breaker GIS charge is roughly
+# VOLTAGE-INDEPENDENT (16 kg @72.5 kV vs 15 kg @145 kV). So per-substation SF6 does NOT scale via
+# per-breaker charge — it scales via BAY COUNT and busbar extent, which grow with voltage/importance.
+# Phase-2 substation charge must therefore be driven by (charge_per_bay x bays), with bay-count the
+# primary voltage scaler. Higher-voltage per-breaker values below are MODELLED_LOWCONF placeholders
+# pending CIGRE TB 430 / a national NIR; do not treat them as firm.
+voltage_class_kv,representative_kv,gis_charge_kg_per_breaker,ais_charge_kg_per_breaker,status,basis
+72.5,72.5,16,,SOURCED,"Krondorfer/EPA Table 1 (Solvay OKOBILANZ LCA): GIS 72.5kV 40kA = 16 kg"
+110-145,145,15,9,SOURCED,"Krondorfer/EPA Table 1: GIS 145kV 40kA = 15 kg; AIS 145kV = 8 kg (31.5kA) / 10 kg (63kA), mean ~9"
+220-245,245,20,12,MODELLED_LOWCONF,"extrapolated; per-breaker charge weakly voltage-dependent; +-50% band; firm up with CIGRE TB430"
+330-420,420,30,18,MODELLED_LOWCONF,"extrapolated; cross-checked vs lifecycle-loss ratio 245->420 ~2.2x; +-50% band; firm up with CIGRE TB430"
+500-550,525,40,24,MODELLED_LOWCONF,"extrapolated; +-50% band; firm up with CIGRE TB430"
+765-800,765,52,31,MODELLED_LOWCONF,"extrapolated; +-50% band; firm up with CIGRE TB430"

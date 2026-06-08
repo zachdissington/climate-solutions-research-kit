@@ -1,0 +1,16 @@
+# P(GIS) = probability a transmission substation is gas-insulated (SF6-filled) rather than air-insulated.
+# STATUS = MODELLED_LOWCONF for ALL rows: no clean published per-voltage GIS market-share figure exists
+# (verified 2026-06-03 — vendor/CIGRE sources give qualitative drivers, not percentages). These are a
+# MONOTONIC-IN-VOLTAGE prior with wide bands, NOT measured. Rationale (sourced, qualitative):
+#   - GIS spans 72.5-1200 kV; chosen where land is constrained (urban) and for top reliability;
+#     uses ~70% less space than AIS (Hitachi Energy / Siemens Energy GIS product pages).
+#   - GIS share rises with voltage and in dense/urban sites; AIS dominates rural sub-transmission.
+# Because Layer 1 is calibrated to national totals, the RELATIVE (monotonic) shape matters more than the
+# absolute level. Firm up with CIGRE GIS-population data / market reports. urban_uplift applied if a
+# substation is in a high-density cell (added multiplicatively, capped at 1.0).
+voltage_class_kv,representative_kv,p_gis,p_gis_low,p_gis_high,status
+72.5-145,145,0.15,0.05,0.30,MODELLED_LOWCONF
+220-245,245,0.30,0.15,0.50,MODELLED_LOWCONF
+330-420,420,0.45,0.25,0.65,MODELLED_LOWCONF
+500-550,525,0.55,0.30,0.75,MODELLED_LOWCONF
+765-800,765,0.60,0.35,0.80,MODELLED_LOWCONF

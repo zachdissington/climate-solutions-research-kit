@@ -1,0 +1,90 @@
+name,country_iso3,lat,lon,capacity_ktpa,technology,status_2020,source
+Hongqiao Weiqiao Binzhou,CHN,36.898,117.784,5000,,operating,GEM:Weiqiao(coords);capacity approx world-largest
+Pingguo Aluminum Chalco,CHN,23.340,107.511,140,,operating,GEM:Pingguo;WP
+Baotou Aluminum Chalco,CHN,40.650,109.833,1340,,operating,WP;Baotou town-centroid
+Qingtongxia Aluminum,CHN,37.900,106.010,685,,operating,WP;Qingtongxia town-centroid
+Lanzhou Liancheng Chalco,CHN,36.20,103.30,550,,operating,WP;Liancheng town-centroid
+Yunnan Aluminium Qujing Zhanyi,CHN,25.58,103.82,500,,operating,WP;Qujing town-centroid
+Xinjiang Tianshan Shihezi,CHN,44.306,86.081,400,,operating,WP;Shihezi dev-zone
+Xinjiang East Hope Changji,CHN,44.011,87.308,860,,operating,WP;Changji town-centroid
+Huomei Hongjun Holingol,CHN,45.52,119.65,1060,,operating,WP;Holingol town-centroid
+Henan Shenhuo Yongcheng,CHN,33.93,116.45,160,,operating,WP;Yongcheng town-centroid
+East Hope Sanmenxia,CHN,34.78,111.18,650,,operating,WP;Sanmenxia town-centroid
+Jiaozuo Wanfang,CHN,35.22,113.24,420,,operating,WP;Jiaozuo town-centroid
+Aluar Puerto Madryn,ARG,-42.74,-65.04,460,,operating,WP;Puerto Madryn town-centroid
+Tomago,AUS,-32.825,151.725,590,,operating,latitude.to facility
+Boyne Island Gladstone,AUS,-23.924,151.337,570,,operating,latitude.to facility
+Portland,AUS,-38.386,141.625,358,,operating,latitude.to facility
+Bell Bay,AUS,-41.121,146.868,180,,operating,latitude.to facility
+Alba Askar,BHR,26.089,50.604,1540,,operating,industryabout facility
+Albras Barcarena,BRA,-1.54,-48.65,460,,operating,WP;Barcarena
+CBA Aluminio,BRA,-23.532,-47.269,455,,operating,WP;facility
+Alouette Sept-Iles,CAN,50.159,-66.443,606,,operating,industryabout facility
+Alma,CAN,48.550,-71.650,466,,operating,WP;Alma town-centroid
+Becancour ABI,CAN,46.36,-72.38,437,,operating,wikimapia Becancour
+Kitimat,CAN,54.02,-128.70,420,,operating,WP;Kitimat smelter area
+Baie-Comeau,CAN,49.256,-68.145,300,,operating,wikimapia facility
+Deschambault,CAN,46.66,-71.93,260,,operating,WP;Deschambault town-centroid
+Laterriere Saguenay,CAN,48.30,-71.18,244,,operating,WP;town-centroid
+Grande-Baie Saguenay,CAN,48.34,-70.86,221,,operating,WP;town-centroid
+Arvida Saguenay,CAN,48.44,-71.18,173,,operating,WP;Arvida town-centroid
+Egyptalum Nag Hammadi,EGY,26.05,32.24,320,,operating,WP;Nag Hammadi town-centroid
+Aluminium Dunkerque,FRA,51.02,2.20,284,,operating,WP;Dunkerque town-centroid
+Saint-Jean-de-Maurienne Trimet,FRA,45.28,6.34,141,,operating,WP;town-centroid
+Trimet Essen,DEU,51.45,6.99,170,,operating,WP;Essen town-centroid
+Trimet Hamburg,DEU,53.49,9.93,135,,operating,WP;Hamburg town-centroid
+Speira Neuss,DEU,51.18,6.69,230,,operating,WP;Neuss town-centroid
+Trimet Voerde,DEU,51.59,6.69,96,,idle,WP;Voerde town-centroid
+Aluminium of Greece Agios Nikolaos,GRC,38.43,22.78,166,,operating,WP;Boeotia town-centroid
+Alcoa Fjardaal Reydarfjordur,ISL,65.033,-14.220,346,,operating,search facility
+Nordural Grundartangi,ISL,64.357,-21.783,312,,operating,getamap facility
+Rio Tinto ISAL Straumsvik,ISL,64.05,-22.02,205,,operating,WP;Straumsvik
+BALCO Korba,IND,22.394,82.734,570,,operating,search facility
+Vedanta Jharsuguda,IND,21.86,84.00,1750,,operating,WP;Jharsuguda town-centroid
+NALCO Angul,IND,20.849,85.190,475,,operating,GEM:Angul
+Hindalco Renukoot,IND,24.20,83.03,345,,operating,WP;Renukoot town-centroid
+Hindalco Hirakud,IND,21.530,83.905,213,,operating,latitude.to facility
+Hindalco Mahan Bargawan,IND,24.10,82.45,360,,operating,WP;Singrauli town-centroid
+Aditya Lapanga,IND,21.62,84.10,360,,operating,WP;Sambalpur town-centroid
+Hindalco Aditya Belgaum,IND,15.85,74.50,390,,operating,WP;Belgaum town-centroid
+INALUM Kuala Tanjung,IDN,3.37,99.43,265,,operating,WP;Kuala Tanjung town-centroid
+Iralco Arak,IRN,34.05,49.70,200,,operating,WP;Arak town-centroid
+Almahdi Hormozal Bandar Abbas,IRN,27.18,56.28,257,,operating,WP;Bandar Abbas town-centroid
+KAZ Pavlodar,KAZ,52.30,76.95,250,,operating,WP;Pavlodar town-centroid
+Press Metal Bintulu Samalaju,MYS,3.27,113.10,960,,operating,WP;Samalaju town-centroid
+Press Metal Mukah,MYS,2.90,112.10,120,,operating,WP;Mukah town-centroid
+Mozal Maputo Matola,MOZ,-25.914,32.406,565,,operating,latitude.to facility
+Tiwai Point NZAS,NZL,-46.60,168.36,351,,operating,WP;Tiwai Point area
+Sunndal Hydro,NOR,62.680,8.555,400,,operating,search facility
+Ardal Hydro,NOR,61.23,7.70,233,,operating,WP;Ovre Ardal town-centroid
+Mosjoen Alcoa,NOR,65.846,13.190,222,,operating,industryabout facility
+Karmoy Hydro,NOR,59.314,5.311,190,,operating,wikimapia facility
+Husnes Hydro,NOR,59.87,5.77,185,,operating,WP;Husnes town-centroid
+Lista Alcoa,NOR,58.10,6.57,128,,operating,WP;Lista town-centroid
+Hoyanger Hydro,NOR,61.22,6.07,60,,operating,WP;Hoyanger town-centroid
+Sohar Aluminium,OMN,24.467,56.637,372,,operating,search facility
+Qatalum Mesaieed,QAT,24.989,51.580,625,,operating,latlong facility
+Alro Slatina,ROU,44.43,24.39,288,,operating,WP;Slatina town-centroid
+Bratsk BrAZ,RUS,56.128,101.452,1010,,operating,wikimapia facility
+Krasnoyarsk KrAZ,RUS,56.095,93.012,1008,,operating,search facility
+Sayanogorsk SaAZ,RUS,53.10,91.42,542,,operating,WP;Sayanogorsk town-centroid
+Khakas KhAZ,RUS,53.10,91.42,300,,operating,WP;Sayanogorsk town-centroid
+Irkutsk IrkAZ Shelekhov,RUS,52.20,104.10,415,,operating,WP;Shelekhov town-centroid
+Novokuznetsk NkAZ,RUS,53.758,87.136,330,,operating,WP;Novokuznetsk town-centroid
+Bogoslovsk BAZ Krasnoturinsk,RUS,59.77,60.20,190,,operating,wikimapia Bogoslovsk
+Volgograd VgAZ,RUS,48.78,44.55,170,,operating,WP;Volgograd town-centroid
+Kandalaksha KAZ,RUS,67.15,32.41,75,,operating,WP;Kandalaksha town-centroid
+Volkhov VAZ,RUS,59.92,32.34,24,,operating,WP;Volkhov town-centroid
+Maaden Ras Al Khair,SAU,27.517,49.168,780,,operating,wikimapia facility
+Hillside Richards Bay,ZAF,-28.78,32.06,720,,operating,WP;Richards Bay area
+Kubal Sundsvall,SWE,62.40,17.31,130,,operating,WP;Sundsvall town-centroid
+Talco Tursunzoda,TJK,38.51,68.23,450,,operating,WP;Tursunzoda town-centroid
+Eti Aluminium Seydisehir,TUR,37.42,31.85,75,,operating,WP;Seydisehir town-centroid
+EGA Jebel Ali Dubai,ARE,24.907,54.763,1040,,operating,GEM facility
+EGA Al Taweelah,ARE,24.65,54.70,1500,,operating,WP;Taweelah KIZAD
+Lochaber Fort William,GBR,56.82,-5.10,42,,operating,WP;Fort William town-centroid
+Alcoa Warrick Newburgh,USA,37.915,-87.334,270,,operating,wikimapia facility
+Century Mount Holly,USA,33.18,-80.02,224,,operating,WP;Berkeley Co town-centroid
+Century Sebree,USA,37.66,-87.66,218,,operating,WP;Sebree town-centroid
+Alcoa Massena,USA,44.97,-74.78,135,,operating,WP;Massena town-centroid
+CVG Venalum Matanzas,VEN,8.30,-62.85,448,,operating,WP;Ciudad Guayana town-centroid

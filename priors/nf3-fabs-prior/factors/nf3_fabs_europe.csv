@@ -1,0 +1,12 @@
+name,company,city,country,lat,lon,status_2020,node_class,nf3_note,coord_confidence,source
+Dresden Fab,Infineon,Dresden,DEU,51.10,13.77,operating,power/analog 200-300mm,CVD/etch NF3 use,address-level,"infineon.com/regional/dresden (Koenigsbruecker Str 180)"
+Fab 1 Dresden,GlobalFoundries,Dresden (Wilschdorf),DEU,51.13,13.74,operating,logic foundry 300mm,high NF3 CVD clean,address-level,"silicon-saxony.de; gf.com worldwide-locations (Wilschdorfer Landstrasse 101)"
+Reutlingen,Bosch,Reutlingen,DEU,48.49,9.20,operating,MEMS/power/SiC 150-200mm,lower vol NF3,town-level,"bosch-semiconductors.com/reutlingen"
+Erfurt,X-FAB,Erfurt,DEU,50.93,11.05,operating,analog/MEMS foundry,modest NF3,town-level,"xfab.com/manufacturing/our-fabs"
+Crolles,STMicroelectronics,Crolles (Grenoble),FRA,45.28,5.88,operating,logic 200-300mm,NF3 partly replaced by on-site F2 (~2017) - over-stated by presence,town-level,"fabtech.org STMicro Crolles F2; ST Sustainability Report 2024"
+Rousset,STMicroelectronics,Rousset (Aix),FRA,43.49,5.61,operating,NVM/MCU 200mm,lower vol NF3,town-level,"en.wikipedia.org/wiki/STMicroelectronics facilities"
+Agrate Brianza,STMicroelectronics,Agrate Brianza (Milan),ITA,45.58,9.36,operating,MEMS/smart-power 200mm,NF3 use,town-level,"st.com Agrate site"
+Catania,STMicroelectronics,Catania,ITA,37.50,15.07,operating,flash/power/SiC 200mm,NF3 use,town-level,"en.wikipedia.org/wiki/STMicroelectronics facilities"
+Leixlip,Intel,Leixlip (Kildare),IRL,53.376,-6.521,operating,logic leading-edge 300mm,high NF3; point-of-use abatement,address-geocode,"exploreintel.com/ireland (Collinstown, Leixlip)"
+Villach,Infineon,Villach,AUT,46.61,13.85,operating,power SiC/GaN 300mm,NF3 use,address-level,"infineon.com/austria (Siemensstrasse 2)"
+Nijmegen,NXP/Nexperia,Nijmegen,NLD,51.85,5.86,operating,analog/discretes/RF (older),lower NF3,address-level,"nxp.com Netherlands (Gerstweg 2)"

@@ -1,0 +1,5 @@
+# Database query/build tooling (scripts/).
+# Each prior under priors/*/ has its own heavier deps for the inversion code —
+# see priors/*/requirements.txt or the imports in priors/*/src/.
+python-frontmatter
+pyyaml

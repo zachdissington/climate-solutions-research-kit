@@ -1,0 +1,33 @@
+name,country,lat,lon,capacity_ktpa,status_2020,source
+Hydro Sunndal,NOR,62.675,8.565,450,operating,hydro/operator
+Hydro Ardal,NOR,61.310,7.800,230,operating,hydro/operator
+Hydro Karmoy,NOR,59.280,5.280,265,operating,hydro/operator
+Hydro Husnes,NOR,59.870,5.780,190,operating,hydro/operator
+Hydro Hoyanger,NOR,61.220,6.080,65,operating,hydro/operator
+Hydro Lista,NOR,58.100,6.620,94,operating,hydro/operator
+Alcoa Mosjoen,NOR,65.840,13.200,188,operating,alcoa/operator
+Rio Tinto ISAL Straumsvik,ISL,64.050,-22.030,212,operating,riotinto/operator
+Alcoa Fjardaal Reydarfjordur,ISL,65.040,-14.200,344,operating,alcoa/operator
+Century Nordural Grundartangi,ISL,64.330,-21.770,317,operating,century/operator
+Trimet Essen,DEU,51.460,6.980,165,operating,trimet/operator
+Trimet Hamburg,DEU,53.490,9.930,135,operating,trimet/operator
+Speira Rheinwerk Neuss,DEU,51.180,6.710,150,operating,speira/operator
+Trimet Voerde,DEU,51.600,6.690,95,idle,trimet/operator
+Aluminium Dunkerque,FRA,51.020,2.200,290,operating,operator
+Trimet Saint-Jean-de-Maurienne,FRA,45.280,6.350,145,operating,trimet/operator
+Alcoa San Ciprian,ESP,43.710,-7.440,228,operating,alcoa/operator
+Alcoa Aviles,ESP,43.550,-5.920,93,operating,alcoa/operator
+Alcoa A Coruna,ESP,43.340,-8.410,87,operating,alcoa/operator
+Kubal Sundsvall,SWE,62.430,17.370,132,operating,kubal/operator
+Alro Slatina,ROU,44.430,24.390,265,operating,alro/operator
+Mytilineos Agios Nikolaos,GRC,38.400,22.800,190,operating,mytilineos/operator
+Slovalco Ziar nad Hronom,SVK,48.590,18.860,175,operating,slovalco/operator
+Talum Kidricevo,SVN,46.400,15.790,85,operating,talum/operator
+Alvance Lochaber Fort William,GBR,56.820,-5.080,47,operating,alvance/operator
+Aldel Delfzijl,NLD,53.300,6.930,110,operating,aldel/operator
+RUSAL Kandalaksha,RUS,67.150,32.410,76,operating,rusal/operator
+RUSAL Volkhov,RUS,59.920,32.350,24,operating,rusal/operator
+RUSAL Nadvoitsy,RUS,63.860,34.300,24,idle,rusal/operator
+Portovesme,ITA,39.200,8.390,150,idle,glencore/operator
+KAP Podgorica,MNE,42.420,19.250,120,idle,operator
+Aluminij Mostar,BIH,43.310,17.820,130,idle,operator
