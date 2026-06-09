@@ -34,10 +34,20 @@
   factors) is deep-build work (task T-002), not gate work.
 
 ## Global smelter registry (`smelters_global.csv`) — China INCOMPLETE (T-002 Phase A)
-- ~88 operating primary smelters worldwide with sourced coordinates + capacity (per-row `source`):
+- **94** operating primary smelters worldwide with sourced coordinates + capacity (per-row `source`):
   GEM exact coords (Weiqiao, Pingguo, Angul), Wikipedia "List of aluminium smelters" (capacity/owner/
   status), and facility-specific coord sources (latitude.to / wikimapia / industryabout / company).
   At the Püschel **1° grid** (~111 km/cell), town-centroid coordinates are adequate.
+- **Europe subset completed 2026-06-09** (holistic validation): the registry was missing 6 of the 27
+  validated European smelters (Alcoa San Ciprian / Aviles / A Coruna ESP, Slovalco SVK, Talum SVN,
+  Aldel NLD) — merged in from `smelters_europe_killtest.csv`, so the global field now contains the
+  full Europe-validated configuration (25/25 one-degree cells).
+- **Production-rescaled variant** (`outputs/prior_cf4_global_production.nc`, recommended for global
+  use): country totals rescaled to USGS Mineral Commodity Summaries Jan 2021, "Aluminum", World
+  Smelter Production 2020e (China 37,000 kt of world 65,200 kt = 56.7%; listed countries used
+  directly; the 9,000 kt "Other countries" pool distributed across unlisted registry countries by
+  registry capacity). Fixes the first-order country-share bias of the raw capacity field (China 28.0%
+  of weight vs 56.7% of production). Built by `src/production_rescale.py`.
 - **China is badly under-represented: ~12 of ~120 smelters** (GEM rate-limited the registry agent after
   3 facilities; Wikipedia gives no usable China coords). The major clusters are present (Shandong/
   Weiqiao, Inner Mongolia, Xinjiang, Yunnan, Gansu, Ningxia, Henan, Guangxi) but the long tail is

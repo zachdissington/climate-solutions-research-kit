@@ -1,5 +1,13 @@
 # CF4 Kill-Test Verdict — smelter prior vs population proxy, vs the ICOS 2020 CF4 posterior
 
+> **2026-06-09 — interpretation narrowed by the holistic significance re-test**
+> (`validation_report_holistic_2026-06-09.md`, canonical: `../decisions/2026-06-09-holistic-validation-verdict.md`).
+> The numbers below reproduce exactly, but: Iceland is the only *statistically significant* win (block
+> bootstrap + shift-null; and only the 2 RHIME members cover Iceland); the pooled win is consistent in
+> direction across all 6 members but not per-member significant vs spatial autocorrelation; **the France
+> "win" does not survive** (RHIME members show a significant loss; near-tie at 1°). Grid correction: the
+> ICOS posterior is 0.234°×0.352°, not 0.1°. Do not quote France or the "~4×" ratio from this report.
+
 > Run 2026-06-06 (task T-001). The cheap, decisive accuracy gate. Truth = ICOS PARIS CF4 posterior,
 > year 2020, Europe, **6-member ensemble** (RHIME/InTEM/ELRIS × NAME/FLEXPART), **FLAT prior** (so the
 > posterior is observation-driven, not prior-dominated). Candidates: our European smelter prior

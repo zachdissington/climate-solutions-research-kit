@@ -61,6 +61,21 @@ def main():
     print(f"[global_prior] {len(rows)} operating smelters from {src}; capacity {sum(r[2] for r in rows):,.0f} ktpa")
     for weighted, tag in ((True, "capacity"), (False, "presence")):
         da = build(rows, weighted)
+        da.name = "prior_weight"
+        da.attrs = {
+            "long_name": f"Smelter-resolved CF4 spatial prior, global ({tag}, relative)",
+            "units": "1",
+            "comment": (("Relative spatial weight (NOT absolute flux): rescale to the inversion total "
+                         "before use as an a-priori. Weight = smelter nameplate capacity (ktpa). "
+                         "CAUTION for global use: the registry under-covers China (~12 of ~120 smelters), "
+                         "so this raw variant carries China at ~28% of weight vs its ~57% production "
+                         "share; prefer prior_cf4_global_production.nc for country-share-correct use."
+                         ) if weighted else
+                        ("Relative spatial weight (NOT absolute flux): rescale to the inversion total "
+                         "before use as an a-priori. Presence-only robustness variant (operating "
+                         "smelter = 1). Registry under-covers China (~12 of ~120 smelters).")),
+            "source": "factors/smelters_global.csv (operating-2020 smelters)",
+        }
         fp = os.path.join(OUT, f"prior_cf4_global_{tag}.nc")
         da.to_netcdf(fp)
         print(f"[global_prior] {tag}: {int((da.values>0).sum())} non-zero 1deg cells -> {fp}")

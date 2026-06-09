@@ -5,11 +5,14 @@ primary-aluminium **PFCs** — **CF4 lead, C2F6 secondary/low-confidence** — a
 the population/built-up proxy EDGAR and the PFC atmospheric-inversion community (AGAGE/Bristol/MIT) use
 today.
 
-**Status (2026-06-07):** CF4 Europe kill-test = **QUALIFIED GO** (~4× over EDGAR), China validation
-collaboration-gated (outreach drafts staged). C2F6 leg run = **WEAK / QUALIFIED** — same smelter prior,
-decisive only in remote well-constrained theatres (Iceland); ships low-confidence with CF4, not
-standalone. Both legs' verdicts + diagnostics in `validation_report_killtest.md`; C2F6 decision in
-`../decisions/2026-06-07-c2f6-killtest.md`.
+**Status (2026-06-09):** Holistic pre-handoff validation DONE — claims recalibrated (Iceland = the
+one significant Europe win; pooled = consistent direction 6/6 members, not per-member significant;
+**France no longer claimed**), deposit repaired (registry Europe-complete at 94 smelters; new
+production-rescaled global variant fixes China 28%→56.7% weight share; attrs on every NetCDF), email
+v2 rewritten honest on the attribution link. Zenodo draft 20617486 synced (11 files) — **publish +
+send gated on Zach**. See `validation_report_holistic_2026-06-09.md` +
+`../decisions/2026-06-09-holistic-validation-verdict.md`. China validation stays collaboration-gated.
+C2F6 leg = **WEAK / QUALIFIED** (ships low-confidence with CF4): `../decisions/2026-06-07-c2f6-killtest.md`.
 
 ## Why this one (the accuracy-first pick)
 

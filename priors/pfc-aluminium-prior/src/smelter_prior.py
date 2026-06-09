@@ -47,6 +47,16 @@ def main():
     print(f"[smelter] operating-2020 smelters: {len(rows)}; total capacity {sum(r[3] for r in rows):,.0f} ktpa")
     for weighted, tag in ((True, "capacity"), (False, "presence")):
         da = build_grid(rows, weighted=weighted)
+        da.name = "prior_weight"
+        da.attrs = {
+            "long_name": f"Smelter-resolved CF4 spatial prior, Europe ({tag}, relative)",
+            "units": "1",
+            "comment": ("Relative spatial weight (NOT absolute flux): rescale to the inversion total "
+                        "before use as an a-priori. Weight = smelter nameplate capacity (ktpa)" if weighted
+                        else "Relative spatial weight (NOT absolute flux): rescale to the inversion total "
+                        "before use as an a-priori. Presence-only robustness variant (operating smelter = 1)"),
+            "source": "factors/smelters_europe_killtest.csv (operating-2020 smelters)",
+        }
         nz = int((da.values > 0).sum())
         fp = os.path.join(OUT, f"prior_cf4_europe_{tag}.nc")
         da.to_netcdf(fp)
