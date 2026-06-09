@@ -55,10 +55,10 @@ flow.append(bullets([
     "Europe-complete; China carries its 12 major clusters out of ~120 plants (disclosed).",
     "<b>Weighting, three variants:</b> capacity-weighted; presence-only (each smelter = 1, robustness); and "
     "<b>production-rescaled</b> (country totals matched to USGS 2020 national primary-aluminium production, "
-    "distributed within country by capacity) — the recommended variant for global use, since the raw registry "
+    "distributed within country by capacity), the recommended variant for global use, since the raw registry "
     "under-weights China (~28% of weight vs ~57% of world production).",
     "<b>Grid + normalize:</b> rasterize to the target grid; the output is a <i>relative</i> (normalized) "
-    "spatial weight, to be rescaled to the inversion’s total flux before use — it must never be read as "
+    "spatial weight, to be rescaled to the inversion’s total flux before use. It must never be read as "
     "absolute emissions.",
     "<b>Validation metric:</b> per-region spatial correlation against an observation-driven inversion "
     "<b>posterior</b> (flat-prior, so no circularity), vs the EDGAR population/built-up baseline, with "
