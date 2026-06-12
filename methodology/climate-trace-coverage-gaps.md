@@ -44,7 +44,7 @@ just isn't forests.
 | **7.5** | **Fluorinated Gases** | **THIN** | **YES** | See below |
 | 4.5 | Waste (landfill methane) | OCCUPIED | With partners | Most occupied sub-sector: RMI leads it + Carbon Mapper/GHGSat/MethaneSAT all image landfill plumes. (Residual gap noted in **wastewater** CH4/N2O — backup option.) |
 | 2.5 | Mineral extraction | OCCUPIED | No | GEM/Ember/UNEP IMEO crowded in 2025–26; abandoned-mine emissions are below satellite detection thresholds. |
-| 2.5 | Maritime/fishing | OCCUPIED | With partners | JHU APL (coalition) + Global Fishing Watch own it with proprietary AIS/SAR pipelines. |
+| 2.5 | Maritime/fishing | OCCUPIED | With partners | OceanMind (shipping sector lead) + Global Fishing Watch + UCSB emLab own it with AIS/SAR pipelines. [corrected 2026-06-10: was mis-attributed to JHU APL, which actually leads road transport / wastewater / reservoirs — see `climate-trace-coalition-cf4-audit.md`] |
 
 ## Why Fluorinated Gases won
 

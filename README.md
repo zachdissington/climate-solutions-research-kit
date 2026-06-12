@@ -1,6 +1,6 @@
 # Climate Solutions Research Kit
 
-Open methods and tooling for climate-solution and high-GWP emissions research. The headline is a reusable method, with four worked case studies, for building point-source-resolved spatial priors for orphaned high-GWP greenhouse gases. It also ships tooling to turn a Project Drawdown Explorer export into a queryable local database.
+Open methods and tooling for climate-solution and high-GWP emissions research. The headline is a reusable method, with five worked case studies, for building point-source-resolved spatial priors for orphaned high-GWP greenhouse gases. It also ships tooling to turn a Project Drawdown Explorer export into a queryable local database.
 
 This repo contains only original work. It does **not** redistribute Project Drawdown's data — you bring your own export (see below), in line with [Drawdown's terms](https://drawdown.org/terms-of-use).
 
@@ -12,9 +12,11 @@ The gridded CF4 smelter-resolved prior is archived as a citable dataset on Zenod
 
 **Inversion groups:** if a prior-sensitivity run (OSSE) with the smelter prior would be useful, I will set it up end to end — open an issue here, or reach me through [github.com/zachdissington](https://github.com/zachdissington). A returned East-Asia posterior or an OSSE is exactly the test the CF4 prior is currently gated on.
 
+**A published negative result.** The HFC-134a case study is archived as its own citable Zenodo deposit: **DOI [10.5281/zenodo.20652491](https://doi.org/10.5281/zenodo.20652491)** (CC-BY-4.0). It reports that a cooling-demand-weighted refrigerant-bank prior does *not* improve on the population proxy for HFC-134a — a useful dead end for the F-gas inversion community, and the deliberate counterpart to the CF4 result.
+
 ## What's inside
 
-- `priors/` — four worked spatial-prior case studies: SF6 (electricity grid), PFC-CF4 (aluminium smelters), HFC-23 (HCFC-22 plants), NF3 (semiconductor fabs). Each carries `src/` (the code), `factors/` (emission factors + sources), and validation reports.
+- `priors/` — five worked spatial-prior case studies: SF6 (electricity grid), PFC-CF4 (aluminium smelters), HFC-23 (HCFC-22 plants), NF3 (semiconductor fabs), HFC-134a (refrigerant banks). Each carries `src/` (the code), `factors/` (emission factors + sources) where applicable, and validation reports.
 - `methodology/` — the spatial-prior artifact playbook, a pre-build stress test, and a Climate TRACE coverage-gap analysis.
 - `scripts/` — tooling to build and query a local solutions database from your own Drawdown Explorer export.
 
@@ -22,7 +24,7 @@ The gridded CF4 smelter-resolved prior is archived as a citable dataset on Zenod
 
 ## The spatial-prior method, and its honest results
 
-The premise: national inventories spread high-GWP gas emissions across population (a weak proxy), while many of these gases come from a handful of industrial point sources. A facility-resolved prior should beat the population proxy. Four tests:
+The premise: national inventories spread high-GWP gas emissions across population (a weak proxy), while many of these gases come from a handful of industrial point sources. A facility-resolved prior should beat the population proxy. Five tests:
 
 | Gas | Source | Verdict |
 |-----|--------|---------|
@@ -30,6 +32,7 @@ The premise: national inventories spread high-GWP gas emissions across populatio
 | SF6 | electricity grid | **Refuted** — the grid proxy is too diffuse to beat population; full post-mortem in `methodology/` |
 | HFC-23 | HCFC-22 plants | **No-go** — European plants sit inside populated regions, so the prior ties the proxy |
 | NF3 | semiconductor fabs | **No-go** — European NF3 is a small abated residual; the real signal is East-Asian and gated |
+| HFC-134a | refrigerant banks | **No-go** — a cooling-demand-weighted bank prior is diffuse and population-coupled; it loses to the population proxy by 2.3× (the SF6 failure mode). Published as a citable negative result |
 
 The reusable lesson lives in `methodology/spatial-prior-artifact-playbook.md`: run the single cheapest decisive test first (find the posterior, pull a baseline, one correlation, go/no-go in hours) before building the full pipeline. Three of four gases were killed in hours this way.
 

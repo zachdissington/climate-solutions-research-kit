@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use this work, please cite the software (this repository) and, for the gridded CF4 prior, the Zenodo dataset below."
 title: "Climate Solutions Research Kit: open spatial-prior method and smelter-resolved CF4 (PFC-14) prior"
-abstract: "Reusable method and four worked case studies for building point-source-resolved spatial priors for orphaned high-GWP greenhouse gases, plus the published open smelter-resolved spatial prior for CF4 emissions from primary-aluminium smelting."
+abstract: "Reusable method and five worked case studies for building point-source-resolved spatial priors for orphaned high-GWP greenhouse gases, plus the published open smelter-resolved spatial prior for CF4 emissions from primary-aluminium smelting and a published HFC-134a refrigerant-bank negative result."
 type: software
 authors:
   - family-names: Dissington
@@ -9,8 +9,8 @@ authors:
     orcid: "https://orcid.org/0009-0007-0196-1371"
 repository-code: "https://github.com/zachdissington/climate-solutions-research-kit"
 license: MIT
-version: "1.0.0"
-date-released: "2026-06-09"
+version: "1.1.0"
+date-released: "2026-06-11"
 keywords:
   - atmospheric inversion
   - spatial prior
@@ -23,6 +23,9 @@ identifiers:
   - type: doi
     value: 10.5281/zenodo.20617486
     description: "The CF4 smelter-resolved spatial prior dataset (gridded NetCDF fields + the open smelter registry), archived on Zenodo under CC-BY-4.0."
+  - type: doi
+    value: 10.5281/zenodo.20652491
+    description: "The HFC-134a refrigerant-bank prior negative result (method note, validation, gridded priors + code), archived on Zenodo under CC-BY-4.0."
 preferred-citation:
   type: dataset
   title: "An open smelter-resolved spatial prior for CF4 (PFC-14) emissions"

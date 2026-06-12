@@ -2,6 +2,15 @@
 
 Notable changes to this repository. The gridded CF4 prior dataset is versioned separately on Zenodo (DOI [10.5281/zenodo.20617486](https://doi.org/10.5281/zenodo.20617486)); dataset releases are noted here too. Format loosely follows [Keep a Changelog](https://keepachangelog.com/); releases are calendar-anchored.
 
+## [1.1.0] — 2026-06-11
+
+### Added
+- Fifth worked case study under `priors/`: **HFC-134a (refrigerant banks)** — a deliberate negative result. A cooling-demand-weighted refrigerant-bank prior (population × cooling-degree-days) does *not* improve on the population proxy for European HFC-134a; it loses by 2.3× (pooled spatial correlation 0.270 vs 0.634 for population vs 0.671 for EDGAR), winning 0 of 16 countries. HFC-134a is a diffuse, population-coupled source with no point-source structure to resolve — the SF6 failure mode, the structural opposite of CF4.
+- HFC-134a published as a citable Zenodo deposit (concept DOI 10.5281/zenodo.20652491, CC-BY-4.0).
+
+### Notes
+- Reinforces the selection rule: a facility/infrastructure prior only beats population for sources that are point-like **and** sited away from population.
+
 ## [1.0.0] — 2026-06-09
 
 First public release.
