@@ -92,7 +92,7 @@ for src_rel, cfg in VARIANTS.items():
         "summary": ("Open smelter-resolved spatial prior for CF4 (PFC-14), on the same 1deg global "
                     "grid as the egusphere-2025-5656 deposited fields. Relative spatial weights; "
                     "rescale to total flux before use as an a-priori."),
-        "source": "https://doi.org/10.5281/zenodo.20617486",
+        "source": "https://doi.org/10.5281/zenodo.20617485",
         "references": "https://github.com/zachdissington/climate-solutions-research-kit",
         "Conventions": "CF-1.8",
     }

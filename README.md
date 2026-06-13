@@ -6,7 +6,7 @@ This repo contains only original work. It does **not** redistribute Project Draw
 
 ## Cite this work / use the CF4 prior
 
-The gridded CF4 smelter-resolved prior is archived as a citable dataset on Zenodo: **DOI [10.5281/zenodo.20617486](https://doi.org/10.5281/zenodo.20617486)** (CC-BY-4.0). This repository holds the method and code; the Zenodo deposit is the home of the gridded data. Cite both — use the "Cite this repository" button (generated from `CITATION.cff`) for the method/code, and the Zenodo DOI for the prior fields.
+The gridded CF4 smelter-resolved prior is archived as a citable dataset on Zenodo: **DOI [10.5281/zenodo.20617485](https://doi.org/10.5281/zenodo.20617485)** (CC-BY-4.0, concept DOI — resolves to the latest version). This repository holds the method and code; the Zenodo deposit is the home of the gridded data. The code itself is also archived with its own DOI: **[10.5281/zenodo.20683507](https://doi.org/10.5281/zenodo.20683507)** (MIT). Cite both — use the "Cite this repository" button (generated from `CITATION.cff`) for the method/code, and the dataset DOI for the prior fields.
 
 **Using the CF4 prior.** It is a *relative* (normalized) spatial prior for the aluminium sector only (~60–80% of global CF4), not absolute emissions: rescale it to your own total flux, and combine it with a separate field for electronics and other sources. FLEXINVERT+ drop-in fields (CF-1.8, 1° global) ship in the deposit; the recommended global variant is the production-rescaled one. The prior is Europe-validated against the ICOS PARIS 2020 posterior (Iceland statistically significant); China placement rests on registered smelter clusters and the decisive China test is still collaboration-gated.
 
