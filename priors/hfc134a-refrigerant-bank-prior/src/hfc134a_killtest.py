@@ -90,9 +90,16 @@ def main():
         ds = xr.open_dataset(f)
         lat, lon = ds.latitude.values, ds.longitude.values
         lat_e, lon_e = edges(lat), edges(lon)
-        post = ds.flux_total_posterior.sel(time=str(YEAR), method="nearest").values
+        # Exact-year selection. sel(time="2020", method="nearest") silently returned the
+        # 2019 field for 4 of 6 members (mid-year stamps are equidistant from 2020-01-01 and
+        # the tie resolves to the earlier index) — found in the 2026-06-12 audit; the v1
+        # deposit's numbers were computed from that 4x2019 + 2x2020 mixture.
+        post_sel = ds.flux_total_posterior.sel(time=slice(f"{YEAR}-01-01", f"{YEAR}-12-31"))
+        assert post_sel.time.size == 1, (f, post_sel.time.values)
+        post = post_sel.isel(time=0).values
+        prior_sel = ds.flux_total_prior.sel(time=slice(f"{YEAR}-01-01", f"{YEAR}-12-31"))
         prior_da = xr.DataArray(
-            np.nan_to_num(ds.flux_total_prior.sel(time=str(YEAR), method="nearest").values),
+            np.nan_to_num(prior_sel.isel(time=0).values),
             dims=("latitude", "longitude"), coords={"latitude": lat, "longitude": lon})
         cfrac = ds.country_fraction
         labels = country_labels(ds)
