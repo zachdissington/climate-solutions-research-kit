@@ -96,37 +96,44 @@ for C2F6 (it wins decisively where the inversion is well-constrained and smelter
 0.252 vs ~0, same as CF4), but Europe's tiny C2F6 flux is too low-SNR to validate it cleanly pooled —
 exactly the "C2F6 ships low-confidence, caveated" status the portfolio plan anticipated.
 
-### Result 1 — spatial correlation vs the ICOS 2020 C2F6 posterior (ensemble mean)
+> **2026-06-13 correction:** numbers below re-derived with the exact-2020 `sel_year` fix (the
+> 2026-06-07 figures had mixed 2019 into the ELRIS/InTEM members). Verdict unchanged (WEAK/QUALIFIED);
+> pooled correlation now slightly favours EDGAR and the enrichment percentile reversed upward. See
+> `../decisions/2026-06-07-c2f6-killtest.md` for the full correction note.
+
+### Result 1 — spatial correlation vs the ICOS 2020 C2F6 posterior (ensemble mean, exact-2020)
 
 | Region | OURS (best) | EDGAR-TOT | beats pop? |
 |---|---|---|---|
 | **ISL** (Iceland — remote, well-constrained) | **0.252** | −0.001 | **yes (decisive, as CF4)** |
-| DEU | 0.098 | 0.035 | yes |
-| ESP | 0.065 | 0.018 | yes |
-| **POOL** | 0.009 | 0.007 | yes (near-tie; both ≈ 0) |
-| FRA | 0.011 | 0.100 | no |
-| GBR | −0.002 | 0.022 | no |
-| ITA | nan | 0.213 | n/a (no operating smelter 2020) |
+| DEU | 0.120 | 0.099 | yes |
+| ESP | 0.056 | 0.016 | yes |
+| **POOL** | 0.013 | 0.023 | no (EDGAR edges ahead; both ≈ 0) |
+| FRA | 0.026 | 0.134 | no |
+| GBR | −0.003 | 0.072 | no |
+| ITA | nan | 0.186 | n/a (no operating smelter 2020) |
 | NOR / SWE / ROU / GRC | ≈ EDGAR (degenerate single-smelter ties) | | tie |
 
-6/11 regions ours ≥ EDGAR, but most are degenerate ties; the real signal is the decisive ISL/DEU/ESP
-wins vs a pooled near-tie — **far weaker than CF4's pooled 4× (0.057 vs 0.015).**
+4/11 regions ours beats EDGAR, but the pooled correlation now goes to EDGAR; the real signal is the
+decisive ISL/DEU/ESP wins against a pooled loss — **far weaker than CF4's pooled 4× (0.057 vs 0.015).**
 
-### Result 2 — smelter-cell percentile within the pooled smelter-country domain (mean of members)
+### Result 2 — smelter-cell percentile within the pooled smelter-country domain (mean of members, exact-2020)
 
-MEAN: **POSTERIOR 58.5% · PRIOR 68.3% · EDGAR 59.8%** (22 in-domain smelters). Unlike CF4, the C2F6
-posterior does **not** concentrate at the smelters beyond what population/EDGAR already captures
-(POST ≈ EDGAR) and sits *below* the inversion's own prior — observations don't reinforce the smelter
-pattern for this gas in Europe. Individual remote smelters still rank high (Alcoa Fjardaal IS 96th,
-Mytilineos GRC 88th, Alcoa Spain 84th), consistent with the ISL/ESP correlation wins.
+MEAN: **POSTERIOR 70.2% · PRIOR 68.3% · EDGAR 59.8%** (22 in-domain smelters). The C2F6 posterior now
+ranks smelter cells *above* EDGAR's population proxy and slightly above its own flat-ish prior — a modest
+positive smelter enrichment (the exact-2020 fix reversed the buggy POST 58.5% ≈ EDGAR reading). Individual
+remote smelters rank high (Alcoa Fjardaal IS 96th, Trimet/Speira DEU 95-98th, Alcoa Spain 85-86th),
+consistent with the ISL/DEU/ESP correlation wins. The enrichment metric (smelters above EDGAR) and the
+pooled correlation (EDGAR edges ahead) disagree at the margin; the correlation is the primary metric.
 
 ## Why C2F6 is weaker than CF4 (honest)
 
 C2F6 global EDGAR is only 778 t/yr (vs CF4's far larger flux), so the European C2F6 signal is even
 lower-SNR; the FLAT-prior inversion can barely constrain it, leaving a noisy posterior. Aluminium *is*
 the majority EDGAR C2F6 sector (58%), so the premise is sound — but the ~42% non-aluminium C2F6
-(semiconductor/other, population-coincident) plus the tiny absolute flux dilute the smelter signal to a
-pooled tie. The smelter prior is correct (Iceland proves it); Europe just can't validate it cleanly.
+(semiconductor/other, population-coincident) plus the tiny absolute flux dilute the smelter signal so the
+pooled correlation lands at or just below EDGAR. The smelter prior is correct (Iceland proves it, and the
+enrichment percentile now sits above EDGAR); Europe just can't validate it cleanly on the primary metric.
 
 ## Decision (C2F6 leg)
 
