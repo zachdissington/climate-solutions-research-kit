@@ -45,6 +45,16 @@ def regrid(da, lat_e, lon_e):
     return H
 
 
+def sel_year(da, year):
+    """Exact-year selection. sel(time=str(year), method="nearest") silently returned the
+    2019 field for the ELRIS/InTEM members (mid-year stamps equidistant from year-01-01;
+    the tie resolves to the earlier index) — found in the 2026-06-12 audit. Slice the
+    exact year and assert exactly one field."""
+    s = da.sel(time=slice(f"{year}-01-01", f"{year}-12-31"))
+    assert s.time.size == 1, (year, s.time.values)
+    return s.isel(time=0)
+
+
 def norm(v):
     v = np.clip(np.nan_to_num(v), 0, None); s = v.sum()
     return v / s if s else v
@@ -84,7 +94,7 @@ def main():
         ds = xr.open_dataset(f)
         lat, lon = ds.latitude.values, ds.longitude.values
         lat_e, lon_e = edges(lat), edges(lon)
-        post = ds.flux_total_posterior.sel(time=str(YEAR), method="nearest").values  # mol m-2 s-1; rel only
+        post = sel_year(ds.flux_total_posterior, YEAR).values  # mol m-2 s-1; rel only
         cfrac = ds.country_fraction
         labels = country_labels(ds)
         rg = {k: regrid(da, lat_e, lon_e) for k, da in cand_static}

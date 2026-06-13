@@ -27,7 +27,7 @@ import xarray as xr
 warnings.filterwarnings("ignore")
 
 import benchmarks as B
-from cf4_killtest import COUNTRIES, YEAR, country_labels, edges, flux_files
+from cf4_killtest import COUNTRIES, YEAR, country_labels, edges, flux_files, sel_year
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -81,10 +81,8 @@ def main():
         lat_e, lon_e = edges(plat), edges(plon)
         area = np.cos(np.deg2rad(plat))[:, None] * np.ones((1, plon.size))
 
-        post_d = np.clip(np.nan_to_num(
-            ds.flux_total_posterior.sel(time=str(YEAR), method="nearest").values), 0, None)
-        prior_d = np.clip(np.nan_to_num(
-            ds.flux_total_prior.sel(time=str(YEAR), method="nearest").values), 0, None)
+        post_d = np.clip(np.nan_to_num(sel_year(ds.flux_total_posterior, YEAR).values), 0, None)
+        prior_d = np.clip(np.nan_to_num(sel_year(ds.flux_total_prior, YEAR).values), 0, None)
         post = post_d * area            # relative mass per cell
         prior = prior_d * area
         incr = (post_d - prior_d) * area  # signed increment mass

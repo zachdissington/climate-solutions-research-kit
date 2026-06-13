@@ -22,7 +22,7 @@ import xarray as xr
 warnings.filterwarnings("ignore")
 
 import benchmarks as B
-from cf4_killtest import COUNTRIES, MIN_CELLS, YEAR, country_labels, edges, flux_files, regrid
+from cf4_killtest import COUNTRIES, MIN_CELLS, YEAR, country_labels, edges, flux_files, regrid, sel_year
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -114,8 +114,8 @@ def cf4_enrichment(files):
     for f in files:
         ds = xr.open_dataset(f)
         plat, plon = ds.latitude.values, ds.longitude.values
-        post = np.nan_to_num(ds.flux_total_posterior.sel(time=str(YEAR), method="nearest").values)
-        prior = np.nan_to_num(ds.flux_total_prior.sel(time=str(YEAR), method="nearest").values)
+        post = np.nan_to_num(sel_year(ds.flux_total_posterior, YEAR).values)
+        prior = np.nan_to_num(sel_year(ds.flux_total_prior, YEAR).values)
         labels = country_labels(ds)
         pool = np.zeros_like(post, bool)
         for cc in COUNTRIES:
@@ -165,8 +165,8 @@ def main():
         ds = xr.open_dataset(f)
         lat, lon = ds.latitude.values, ds.longitude.values
         lat_e, lon_e = edges(lat), edges(lon)
-        post = clip0(ds.flux_total_posterior.sel(time=str(YEAR), method="nearest").values)
-        post_raw = np.nan_to_num(ds.flux_total_posterior.sel(time=str(YEAR), method="nearest").values)
+        post = clip0(sel_year(ds.flux_total_posterior, YEAR).values)
+        post_raw = np.nan_to_num(sel_year(ds.flux_total_posterior, YEAR).values)
         cfrac = ds.country_fraction
         labels = country_labels(ds)
         ours = clip0(regrid(ours_cap, lat_e, lon_e))

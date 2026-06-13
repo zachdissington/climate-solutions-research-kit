@@ -77,7 +77,8 @@ def main():
         ds = xr.open_dataset(f)
         lat, lon = ds.latitude.values, ds.longitude.values
         lat_e, lon_e = edges(lat), edges(lon)
-        post = ds.flux_total_posterior.sel(time=str(YEAR), method="nearest").values
+        from cf4_killtest import sel_year
+        post = sel_year(ds.flux_total_posterior, YEAR).values
         cfrac = ds.country_fraction
         labels = [c.decode() if isinstance(c, bytes) else str(c) for c in ds["country"].values]
         rg = {k: regrid(da, lat_e, lon_e) for k, da in cand}

@@ -51,8 +51,9 @@ def main():
     for f in files:
         ds = xr.open_dataset(f)
         plat, plon = ds.latitude.values, ds.longitude.values
-        post = np.nan_to_num(ds.flux_total_posterior.sel(time="2020", method="nearest").values)
-        prior = np.nan_to_num(ds.flux_total_prior.sel(time="2020", method="nearest").values)
+        from cf4_killtest import sel_year
+        post = np.nan_to_num(sel_year(ds.flux_total_posterior, 2020).values)
+        prior = np.nan_to_num(sel_year(ds.flux_total_prior, 2020).values)
         labels = [c.decode() if isinstance(c, bytes) else str(c) for c in ds["country"].values]
         pool = np.zeros_like(post, bool)
         for cc in SMELTER_CC:

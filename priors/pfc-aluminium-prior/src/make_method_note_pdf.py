@@ -36,9 +36,10 @@ flow = []
 flow.append(Paragraph("Smelter-resolved CF4 spatial prior: a one-page method note", h1))
 flow.append(Paragraph(
     "Open research note for the F-gas atmospheric-inversion and inventory community. "
-    "Rev 3 (June 2026): adversarially audited — every number re-derived from code+data; enrichment metric "
-    "rebuilt on a consistent mass basis with midrank ties; claims recalibrated. "
-    "(Rev 2: spatial-significance re-test; production-rescaled variant added.)", sub))
+    "Rev 3 (June 2026): adversarially audited — every number re-derived from code+data; a year-selection "
+    "bug fixed (four ELRIS/InTEM members were silently scored against 2019; all ensemble-wide numbers now "
+    "from exact-2020 fields; Iceland, RHIME-only, unaffected); enrichment metric rebuilt on a consistent "
+    "mass basis with midrank ties; claims recalibrated.", sub))
 
 flow.append(Paragraph("What it is", h2))
 flow.append(Paragraph(
@@ -67,8 +68,9 @@ flow.append(bullets([
     "do not use as a standalone total-CF4 prior (blend with a smooth background / floor).",
     "<b>Validation metric:</b> per-region spatial correlation against an observation-driven inversion "
     "<b>posterior</b> (flat-prior, so no candidate circularity), vs the EDGAR population/built-up baseline, "
-    "with fixed-tile spatial block-bootstrap and toroidal-shift permutation significance tests. Correlations "
-    "are insensitive to the density-vs-mass basis choice (checked both ways; src/audit_basis.py).",
+    "with fixed-tile spatial block-bootstrap and toroidal-shift permutation significance tests; exact-year "
+    "field selection asserted. Correlations are insensitive to the density-vs-mass basis choice (checked "
+    "both ways; src/audit_basis.py).",
 ]))
 
 flow.append(Paragraph("Validation: Europe (ICOS PARIS CF4 posterior, 2020, 6-member flat-prior ensemble)", h2))
@@ -78,18 +80,19 @@ data = [
     [Paragraph("Iceland", cell), Paragraph("<b>0.25</b>", cell), Paragraph("~0", cell),
      Paragraph("significant (bootstrap + shift-null) in the two covering members — both RHIME, one inversion "
                "system; effectively a single-region, single-system result", cell)],
-    [Paragraph("Pooled (smelter countries)", cell), Paragraph("<b>0.057</b>", cell), Paragraph("0.015", cell),
-     Paragraph("direction consistent in 6/6 members (3 systems × 2 transport models, not 6 independent "
-               "results); no member individually significant", cell)],
-    [Paragraph("Germany", cell), Paragraph("<b>0.05</b>", cell), Paragraph("0.005", cell),
-     Paragraph("consistent direction 6/6; not significant", cell)],
-    [Paragraph("Norway, Spain, UK", cell), Paragraph("~0", cell), Paragraph("0.03–0.08", cell),
+    [Paragraph("Pooled (smelter countries)", cell), Paragraph("<b>0.051</b>", cell), Paragraph("0.022", cell),
+     Paragraph("direction favours the smelter prior in 5/6 members (3 systems × 2 transport models, not 6 "
+               "independent results); no member individually significant", cell)],
+    [Paragraph("Germany", cell), Paragraph("<b>0.06</b>", cell), Paragraph("0.015", cell),
+     Paragraph("direction favours the smelter prior in 5/6 members; not significant", cell)],
+    [Paragraph("Norway, Spain, UK", cell), Paragraph("~0", cell), Paragraph("0.01–0.09", cell),
      Paragraph("EDGAR ahead. Norway is the honest counterexample: remote smelters EDGAR zeroes, yet EDGAR "
                "wins the correlation; no mechanism demonstrated", cell)],
     [Paragraph("France", cell), Paragraph("—", cell), Paragraph("—", cell),
      Paragraph("reported symmetrically: the only individually significant French results favour EDGAR (both "
-               "RHIME members); InTEM favours the smelter prior strongly but not significantly — "
-               "system-dependent disagreement", cell)],
+               "RHIME members, and one InTEM member at the larger tile size); the other InTEM member favours "
+               "the smelter prior strongly (+0.37) but not significantly — system-dependent disagreement",
+               cell)],
 ]
 tbl = Table(data, colWidths=[3.9 * cm, 2.3 * cm, 1.8 * cm, 9.3 * cm])
 tbl.setStyle(TableStyle([
@@ -105,19 +108,19 @@ flow.append(tbl)
 flow.append(Spacer(1, 3))
 flow.append(Paragraph(
     "A second, distribution-free metric (common per-cell-mass basis, midrank ties): the observation-driven "
-    "posterior places the 22 in-domain smelter cells at a mean <b>70th percentile</b> of the pooled domain, "
+    "posterior places the 22 in-domain smelter cells at a mean <b>72nd percentile</b> of the pooled domain, "
     "EDGAR at the <b>59th</b> — and EDGAR assigns exactly zero CF4 to <b>15 of the 22</b>, including all three "
     "Icelandic smelter cells (its zeros rank at the midrank of the zero block). The inversion's own flat prior "
     "scores 77 on the same metric, so percentile values partly reflect field construction; the "
-    "construction-independent posterior/prior ratio places the smelter cells at the <b>68th percentile</b>, "
-    "Fjarðaál at the 99th. At the 1-degree grid of the distributed files the pooled correlations are 0.14 "
-    "(smelter prior) vs 0.07 (EDGAR); Iceland 0.55 vs ~0.", body))
+    "construction-independent posterior/prior ratio places the smelter cells at the <b>70th percentile</b>, "
+    "Fjarðaál at the 99th. At the 1-degree grid of the distributed files the pooled correlations are 0.20 "
+    "(smelter prior) vs 0.11 (EDGAR); Iceland 0.55 vs ~0.", body))
 flow.append(Paragraph(
     "Honest reading: the prior is informative where observations resolve point sources, consistent in "
     "direction with the facility-located prior precedent of Kim et al. 2021 (one member of a regional prior "
     "ensemble). The win is <i>relative</i> and concentrated in well-constrained theatres; absolute fine-scale "
     "skill is low for all priors, and EDGAR's smooth field tracks the low-emission background ordering far "
-    "better (midrank rank correlation: pooled 0.37 vs 0.02) — expected by construction for a point-source "
+    "better (midrank rank correlation: pooled 0.35 vs 0.03) — expected by construction for a point-source "
     "field.", body))
 
 flow.append(Paragraph("The open question (why an OSSE would help)", h2))

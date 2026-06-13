@@ -17,7 +17,7 @@ import xarray as xr
 warnings.filterwarnings("ignore")
 
 import benchmarks as B
-from cf4_killtest import COUNTRIES, MIN_CELLS, YEAR, country_labels, edges, flux_files, regrid
+from cf4_killtest import COUNTRIES, MIN_CELLS, YEAR, country_labels, edges, flux_files, regrid, sel_year
 from holistic_significance import block_bootstrap_dr, clip0, pearson, shift_null
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -39,7 +39,7 @@ def main():
             ds = xr.open_dataset(f)
             lat, lon = ds.latitude.values, ds.longitude.values
             lat_e, lon_e = edges(lat), edges(lon)
-            post = clip0(ds.flux_total_posterior.sel(time=str(YEAR), method="nearest").values)
+            post = clip0(sel_year(ds.flux_total_posterior, YEAR).values)
             if mode == "B-mass-basis":
                 post = post * np.cos(np.deg2rad(lat))[:, None]
             labels = country_labels(ds)
