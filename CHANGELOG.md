@@ -2,6 +2,18 @@
 
 Notable changes to this repository. The gridded CF4 prior dataset is versioned separately on Zenodo (DOI [10.5281/zenodo.20617486](https://doi.org/10.5281/zenodo.20617486)); dataset releases are noted here too. Format loosely follows [Keep a Changelog](https://keepachangelog.com/); releases are calendar-anchored.
 
+## [1.2.0] — 2026-06-13
+
+### Changed
+- CF4 validation figures re-derived on exact-2020 fields after a year-selection bug fix (some ensemble members had been scored against 2019). The corrected dataset is published as Zenodo v3 under the same concept DOI; these figures **supersede** the validation numbers quoted in the 1.0.0 and 1.1.0 entries below. Iceland (RHIME-only) was unaffected.
+- C2F6 (second PFC leg) validation report corrected to exact-2020: pooled correlation now slightly favours EDGAR while the smelter-cell enrichment percentile rose above EDGAR; verdict unchanged (weak, low-confidence companion to CF4).
+
+### Added
+- `.zenodo.json` controlling the metadata for the Zenodo-archived code release (creator + ORCID, MIT license, links to the dataset DOIs).
+
+### Notes
+- This release is cut to mint a citable code-archive DOI (via the Zenodo–GitHub integration) for the CF4 data descriptor's code-availability requirement.
+
 ## [1.1.0] — 2026-06-11
 
 ### Added

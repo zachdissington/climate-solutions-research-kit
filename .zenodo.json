@@ -1,0 +1,35 @@
+{
+  "upload_type": "software",
+  "title": "Climate Solutions Research Kit: open spatial-prior method and smelter-resolved CF4 (PFC-14) prior",
+  "description": "Reusable method and worked case studies for building point-source-resolved spatial priors for orphaned high-GWP greenhouse gases, including the open smelter-resolved spatial prior for CF4 from primary-aluminium smelting and an HFC-134a refrigerant-bank negative result. This record archives a tagged release of the code repository; the gridded prior datasets are archived separately on Zenodo (CF4 concept DOI 10.5281/zenodo.20617485; HFC-134a concept DOI 10.5281/zenodo.20652491).",
+  "creators": [
+    {
+      "name": "Dissington, Zach",
+      "orcid": "0009-0007-0196-1371"
+    }
+  ],
+  "license": "MIT",
+  "access_right": "open",
+  "keywords": [
+    "atmospheric inversion",
+    "spatial prior",
+    "high-GWP gases",
+    "PFC",
+    "CF4",
+    "aluminium smelting",
+    "emissions inventory",
+    "F-gases"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.20617485",
+      "relation": "isSupplementTo",
+      "resource_type": "dataset"
+    },
+    {
+      "identifier": "10.5281/zenodo.20652491",
+      "relation": "isSupplementTo",
+      "resource_type": "dataset"
+    }
+  ]
+}

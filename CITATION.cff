@@ -9,8 +9,8 @@ authors:
     orcid: "https://orcid.org/0009-0007-0196-1371"
 repository-code: "https://github.com/zachdissington/climate-solutions-research-kit"
 license: MIT
-version: "1.1.0"
-date-released: "2026-06-11"
+version: "1.2.0"
+date-released: "2026-06-13"
 keywords:
   - atmospheric inversion
   - spatial prior
