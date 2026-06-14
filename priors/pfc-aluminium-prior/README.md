@@ -31,6 +31,7 @@ proxy was diffuse).
 
 ## Pointers
 
+- C2F6 leg — ship-ready caveat + gate (low-confidence companion, **not** a separate build): `C2F6-COMPANION.md`
 - Build plan + phasing + reuse map: `plans/2026-06-06-pfc-cf4-build.md`
 - Authorizing decision: `../decisions/2026-06-06-frame-committed-pfc-cf4-lead.md`
 - Method (how to build one): `../analysis/spatial-prior-artifact-playbook.md`
