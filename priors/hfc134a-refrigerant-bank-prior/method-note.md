@@ -5,7 +5,7 @@
 all numbers below are the corrected exact-2020 values; the qualitative verdict is unchanged. Changelog
 in `validation_report_killtest.md`.) Published: Zenodo concept DOI 10.5281/zenodo.20652491,
 CC-BY-4.0 (data-source licenses vary — see README). Companion to the smelter-resolved CF4 prior
-(DOI 10.5281/zenodo.20617486); this is the deliberate negative result from the same spatial-prior
+(concept DOI 10.5281/zenodo.20617485); this is the deliberate negative result from the same spatial-prior
 program.*
 
 ## One-sentence finding

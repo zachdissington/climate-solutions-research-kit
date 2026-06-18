@@ -1,0 +1,20 @@
+# Python dependencies for the PFC-CF4 spatial-prior code (src/*.py).
+# Pinned to the versions the artifact was built + validated against (the
+# sf6-spatial-prior .venv). Install into a fresh venv:
+#   python -m venv .venv && . .venv/Scripts/activate   # (Windows: .venv\Scripts\activate)
+#   pip install -r requirements.txt
+#
+# Core scientific stack — imported by the validation + build scripts
+# (cf4_killtest.py, holistic_significance.py, enrichment_v2.py, benchmarks.py,
+# smelter_prior.py, global_prior.py, production_rescale.py, etc.):
+numpy==2.4.6
+xarray==2026.4.0
+netCDF4==1.7.4        # NetCDF backend for xarray.open_dataset (.nc files)
+cftime==1.6.5         # NetCDF time decoding — required for sel_year() slicing
+
+# Figures (src/make_figures.py only):
+matplotlib==3.11.0
+
+# Optional — only src/make_method_note_pdf.py (method-note PDF render), not
+# needed for the kill-test / validation pipeline:
+# reportlab>=4.0

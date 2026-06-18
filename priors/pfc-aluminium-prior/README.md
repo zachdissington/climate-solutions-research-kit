@@ -5,12 +5,14 @@ primary-aluminium **PFCs** — **CF4 lead, C2F6 secondary/low-confidence** — a
 the population/built-up proxy EDGAR and the PFC atmospheric-inversion community (AGAGE/Bristol/MIT) use
 today.
 
-**Status (2026-06-09):** Holistic pre-handoff validation DONE — claims recalibrated (Iceland = the
-one significant Europe win; pooled = consistent direction 6/6 members, not per-member significant;
-**France no longer claimed**), deposit repaired (registry Europe-complete at 94 smelters; new
-production-rescaled global variant fixes China 28%→56.7% weight share; attrs on every NetCDF), email
-v2 rewritten honest on the attribution link. Zenodo draft 20617486 synced (11 files) — **publish +
-send gated on Zach**. See `validation_report_holistic_2026-06-09.md` +
+**Status (2026-06-18):** Published and citable. The dataset is on Zenodo under the **concept DOI
+[10.5281/zenodo.20617485](https://doi.org/10.5281/zenodo.20617485)** (CC-BY-4.0; always cite the concept
+DOI — it resolves to the latest version, currently v3 with the exact-2020 corrections), and the code is
+archived at [10.5281/zenodo.20683507](https://doi.org/10.5281/zenodo.20683507) (MIT). An ESSD data
+descriptor is in preparation. Claims are recalibrated (Iceland = the one significant Europe win; pooled =
+consistent direction in 5 of 6 members, not per-member significant; **France not claimed**); the registry
+is Europe-complete at 94 smelters with a production-rescaled global variant (fixes China 28%→56.7% weight
+share). Validation re-verified 2026-06-18 — see `validation_report_holistic_2026-06-18.md` +
 `../decisions/2026-06-09-holistic-validation-verdict.md`. China validation stays collaboration-gated.
 C2F6 leg = **WEAK / QUALIFIED** (ships low-confidence with CF4): `../decisions/2026-06-07-c2f6-killtest.md`.
 
@@ -44,3 +46,25 @@ proxy was diffuse).
 
 `src/` · `factors/` (+ `SOURCES.md`) · `data/` (gitignored) · `outputs/` (gitignored) · `tasks/` ·
 `plans/` · validation reports at the root.
+
+## Running
+
+Install pinned deps first: `pip install -r requirements.txt` (numpy / xarray / netCDF4 / matplotlib;
+built + validated against those versions).
+
+Run every script **as `python src/<script>.py` from the prior root** (this directory). The scripts use
+bare intra-package imports (`import benchmarks`, `from cf4_killtest import ...`), which only resolve when
+`src/` is on `sys.path` — running `python src/<script>.py` puts `src/` there automatically, so no install
+or `PYTHONPATH` is needed. (Equivalently, `cd src && python <script>.py`.) They are deliberately NOT a
+package, so `python -m src.<script>` does **not** work.
+
+Inputs (both large + gitignored, regenerated on a clean clone):
+
+- CF4 posteriors — `python src/fetch_cf4_posteriors.py` (the six ICOS CF4 members; writes
+  `data/posteriors/icos/*cf4_yearly_flux.nc`, which the validation scripts glob for).
+- C2F6 posteriors — `python src/fetch_posteriors.py` (the C2F6 leg).
+- EDGAR v8.0 F-gases baseline — see `src/benchmarks.py` docstring for retrieval (DOI
+  10.2905/b54d8149-2864-4fb9-96b9-5fd3a020c224); resolved via `$EDGAR_ZIP` / local cache / SF6 cache.
+
+Validation entry points (after inputs are present): `python src/cf4_killtest.py`,
+`python src/holistic_significance.py`, `python src/enrichment_v2.py`.

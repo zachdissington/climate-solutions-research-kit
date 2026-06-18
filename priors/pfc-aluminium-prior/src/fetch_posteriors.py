@@ -1,6 +1,14 @@
 """Download + crack the 6-member ICOS PARIS C2F6 (pfc218) posterior ensemble (Europe, FLAT prior).
 Same collection + mechanism as the CF4 leg (DOI 10.18160/GR1Q-6SK4, n8myDc-I-gbHkdt3ajIYLLDe).
-This is the PFC artifact's C2F6 leg. Run:  python src/fetch_posteriors.py
+This is the PFC artifact's C2F6 leg.
+
+For the CF4 ensemble (the primary deliverable's ground truth — `*cf4_yearly_flux.nc`, read by
+cf4_killtest.py / holistic_significance.py / enrichment_v2.py) use the sibling fetcher
+`src/fetch_cf4_posteriors.py`, which carries the six CF4 object IDs from factors/SOURCES.md.
+
+NOTE: the downloaded `.nc` files (and the `_*_pfc218.zip` archives) are large and gitignored
+(see .gitignore: data/, *.nc). They are cached locally; this script REGENERATES them from ICOS on a
+clean clone. Run:  python src/fetch_posteriors.py
 """
 import os
 import zipfile

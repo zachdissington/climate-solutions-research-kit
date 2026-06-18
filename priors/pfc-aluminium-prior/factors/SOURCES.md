@@ -17,15 +17,19 @@ to 4; Tan et al. EF figures explicitly tagged unverified; non-deposited file poi
   mechanism (`curl -L -b "CpLicenseAcceptedFor=<id>" .../objects/<id>` → unzip the `_yearly_flux.nc`).
 
 ### EDGAR CF4 baseline (the population/built-up proxy to beat)
-- **EDGAR v8.0_FT2022_GHG F-gases** bundle (reused from the SF6 build cache at
-  `../sf6-spatial-prior/data/benchmarks/EDGAR_f-gases_emi_nc.zip`). CC-BY-4.0; Crippa et al.,
+- **EDGAR v8.0_FT2022_GHG F-gases** bundle (the embedded product/version string is `v8.0_FT2022_GHG`;
+  "EDGAR v8.0" is the short form used in the manuscript — the code path in `src/benchmarks.py` uses the
+  full `v8.0_FT2022_GHG` string). DOI 10.2905/b54d8149-2864-4fb9-96b9-5fd3a020c224
+  (https://edgar.jrc.ec.europa.eu/dataset_ghg80 → F-gases → emi_nc). Reused from the SF6 build cache at
+  `../sf6-spatial-prior/data/benchmarks/EDGAR_f-gases_emi_nc.zip` when present (see `benchmarks.py` for
+  the env-override / local-cache / SF6-cache resolution order). CC-BY-4.0; Crippa et al.,
   ESSD 16:2811 (2024). CF4 is a separable substance folder (146 members), 0.1°, 1970–2022. CF4's
   aluminium emissions fall to the NFE sector; EDGAR allocates F-gas emissions spatially by population
   and built-up proxies (Crippa et al. 2024) rather than smelter coordinates — that is the proxy this
   prior aims to beat. (The specific backup-proxy mechanism for the NFE sector was characterized in a
   pre-build stress test from EDGAR documentation and has not been independently re-verified.)
 
-### European smelter list (`smelters_europe_killtest.csv`, in the code repository, not this deposit) — GATE-GRADE, ROUGH
+### European smelter list (`smelters_europe_killtest.csv`, in the code repository / archived code DOI 10.5281/zenodo.20683507, not the 12-file data deposit) — GATE-GRADE, ROUGH
 - **Locations**: verified public facts (operator sites / well-documented smelter coordinates),
   good to ~0.05°. These are the load-bearing input (a spatial prior is about *where*).
 - **Capacities (ktpa)**: APPROXIMATE, gate-grade only — compiled from operator/industry figures
@@ -66,6 +70,12 @@ to 4; Tan et al. EF figures explicitly tagged unverified; non-deposited file poi
   PFPB, low per-tonne CF4. **These EF figures are from an incomplete retrieval of a paywalled source
   and have not been independently verified; they drive no published claim.**) Tier-2 technology
   weighting deferred; the registry's technology column ships unpopulated.
+
+## Licensing of coordinate sources
+No OpenStreetMap-derived coordinate is included in either registry: coordinates come from GEM wiki pages,
+Wikipedia's "List of aluminium smelters", operator/company pages, and public gazetteers (latitude.to,
+wikimapia, industryabout, getamap, town centroids). The OpenStreetMap ODbL share-alike obligation therefore
+does not attach to this dataset. Climate TRACE (CC-BY) and EDGAR (CC-BY) inputs are attributed where used.
 
 ## Provenance discipline
 No agent-estimated numbers in any committed factor that drives a published claim. Kill-test capacities

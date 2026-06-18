@@ -1,5 +1,10 @@
 # Holistic Validation — CF4 smelter prior, pre-Vienna-handoff stress test (2026-06-09)
 
+> **SUPERSEDED (numbers only), 2026-06-18:** the result tables below predate the 2026-06-12 year-selection
+> fix and use the strict-rank enrichment basis. For the numbers that match manuscript Rev 2.1, see
+> `validation_report_holistic_2026-06-18.md` (exact-2020 / midrank-enrichment basis). The methodology and
+> design here remain canonical; only the numeric tables are stale.
+
 > Run 2026-06-09 (task T-2026-06-09-023), against the staged Zenodo draft (20617486) and the reply
 > email to Stohl/Püschel/Vojta. Mandate: treat "smelter prior beats EDGAR" as a hypothesis to break;
 > test whether the validated claim transfers to the artifact actually being handed over; and test
