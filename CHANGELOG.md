@@ -1,6 +1,6 @@
 # Changelog
 
-Notable changes to this repository. The gridded CF4 prior dataset is versioned separately on Zenodo (DOI [10.5281/zenodo.20617486](https://doi.org/10.5281/zenodo.20617486)); dataset releases are noted here too. Format loosely follows [Keep a Changelog](https://keepachangelog.com/); releases are calendar-anchored.
+Notable changes to this repository. The gridded CF4 prior dataset is versioned separately on Zenodo (concept DOI [10.5281/zenodo.20617485](https://doi.org/10.5281/zenodo.20617485) — resolves to the latest version, currently v3); dataset releases are noted here too. Format loosely follows [Keep a Changelog](https://keepachangelog.com/); releases are calendar-anchored.
 
 ## [1.2.0] — 2026-06-13
 
@@ -30,7 +30,7 @@ First public release.
 ### Added
 - Spatial-prior method and playbook (`methodology/spatial-prior-artifact-playbook.md`): a cheapest-decisive-test-first approach to building point-source-resolved priors for orphaned high-GWP gases.
 - Four worked kill-test case studies under `priors/`: PFC-CF4 (aluminium smelters), SF6 (electricity grid), HFC-23 (HCFC-22 plants), NF3 (semiconductor fabs), each with `src/`, `factors/`, and validation reports.
-- CF4 smelter-resolved spatial prior published as a citable dataset on Zenodo (DOI 10.5281/zenodo.20617486, CC-BY-4.0): global capacity / presence / production-rescaled fields, 0.1° Europe fields, FLEXINVERT+ drop-in (CF-1.8) variants, the 94-smelter open registry (`smelters_global.csv`), `SOURCES.md`, and the method note (Rev 2).
+- CF4 smelter-resolved spatial prior published as a citable dataset on Zenodo (concept DOI 10.5281/zenodo.20617485, CC-BY-4.0): global capacity / presence / production-rescaled fields, 0.1° Europe fields, FLEXINVERT+ drop-in (CF-1.8) variants, the 94-smelter open registry (`smelters_global.csv`), `SOURCES.md`, and the method note (Rev 2).
 - Bring-your-own-export Project Drawdown solutions-database tooling (`scripts/`).
 
 ### Validation (CF4)
